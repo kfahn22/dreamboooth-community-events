@@ -1,5 +1,15 @@
 # Initially taken from Github's Python gitignore file
 
+# kfahn 
+keras_cv
+assets
+kaggle.ipynb
+working.ipynb
+keras-dreambooth-sprint/Dreambooth_on_Hub.ipynb
+keras-dreambooth-sprint/Dreambooth_on_Hub copy.ipynb
+deeplabv3_plus copy.ipynb
+Miniconda3-latest-MacOSX-arm64.sh
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
