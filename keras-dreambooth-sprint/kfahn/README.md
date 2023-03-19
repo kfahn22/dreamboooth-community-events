@@ -6,6 +6,32 @@
 [WWWDC22](https://developer.apple.com/videos/all-videos/)
 [metal-code](https://developer.apple.com/metal/sample-code/)
 
+## Git Large File Storage
+
+[lfs](https://git-lfs.com)
+[macports](https://guide.macports.org/chunked/installing.macports.html)
+[brew](https://brew.sh)
+[change path](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-macos)
+
+[lightning](https://lightning.ai/docs/pytorch/stable/starter/installation.html)
+--needed for M1/M2/M3
+`export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1`
+`export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1`
+
+`python -m pip install -U lightning`
+
+`conda activate my_env`
+`conda install pytorch-lightning -c conda-forge`
+
+`trainer = Trainer(accelerator="mps", devices=1)`
+
+[blog](https://pytorch.org/blog/accelerated-diffusers-pt-20/)
+[pytorch-backend](https://pytorch.org/docs/master/notes/mps.html)
+[pytorch-github](https://github.com/pytorch/pytorch/wiki/)
+[autograd](https://pytorch.org/docs/master/autograd.html)
+[haven't read](https://towardsdatascience.com/recreating-keras-code-in-pytorch-an-introductory-tutorial-8db11084c60c)
+[layers](https://pytorch.org/docs/stable/search.html?q=layers&check_keywords=yes&area=default)
+
 ### tensorflow-metal
 [tensorflow-metal](https://developer.apple.com/metal/tensorflow-plugin/)
 `bash ~/miniconda.sh -b -p $HOME/miniconda`  
@@ -203,6 +229,23 @@ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflo
 [weights]https://huggingface.co/fchollet/stable-diffusion/resolve/main/kcv_encoder.h5()
 - version 2
 [weight](https://huggingface.co/ianstenbit/keras-sd2.1/resolve/main/text_encoder_v2_1.h5)
+-experimental version of numpy
+[numpy](https://www.tensorflow.org/api_docs/python/tf/experimental/numpy)
+-used in lines 134 - 136
+`attention_mask = tfnp.triu(
+                tf.ones((1, 1, length, length), dtype=self.compute_dtype)
+                * -tfnp.inf,
+                k=1,
+            )`
+- triu: Return a copy of a matrix with the elements below the k-th diagonal zeroed.
+
+[pytorch triu](https://pytorch.org/docs/stable/generated/torch.triu.html)
+`torch.triu(input, diagonal=0, *, out=None)`
+
+
+
+## STABLE-DIFFUSION-PYTORCH
+[pytorch implementation](https://github.com/kfahn22/stable-diffusion-pytorch/tree/main/stable_diffusion_pytorch)
 
 ## DIFFUSERS
 
@@ -257,6 +300,16 @@ Requirements:
 [kerasCV](https://huggingface.co/docs/diffusers/using-diffusers/kerascv)
 [convert-kerascv-sd-diffusers](https://huggingface.co/spaces/sayakpaul/convert-kerascv-sd-diffusers)
 [app.py](https://huggingface.co/spaces/sayakpaul/convert-kerascv-sd-diffusers/blob/main/app.py)
+
+## Hugging Face and Pytorch
+[Install torch with stable diffusion](https://huggingface.co/spaces/stabilityai/stable-diffusion/discussions/1835)
+[corgi](https://huggingface.co/dreambooth-hackathon/ccorgi-dog)
+[diffusors-pytorch](https://huggingface.co/search/full-text?q=diffusers%5Btorch%5D)
+
+## Runway-ml
+[runway-ml](https://github.com/kfahn22/stable-diffusion-1)
+[lightning](https://lightning.ai/docs/pytorch/stable/)
+[lightning.ai](https://lightning.ai/pages/open-source/)
 
 ## sprint
 
