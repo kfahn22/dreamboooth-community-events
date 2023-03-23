@@ -1,5 +1,18 @@
 # DREAMBOOTH
 
+## Github repos
+
+### CompVis
+[CompVis](https://github.com/CompVis/stable-diffusion)   
+
+## GitHub repos working on training DreamBooth on Mac
+[XavierXiao](https://github.com/XavierXiao/Dreambooth-Stable-Diffusion/pull/36)
+[DreanBoothMac](https://github.com/SujeethJinesh/DreamBoothMac)
+[Issues](https://github.com/CompVis/stable-diffusion/issues/25)
+
+## Link to notebook explaining how to use Lambda in Colab
+[notebook](https://github.com/carolineechen/hf-community-events/blob/main/keras-dreambooth-sprint/runhouse/dreambooth_rh_colab.ipynb)
+
 ## LOADING THE DATA
 
 [tutorial](https://pytorch.org/data/main/dp_tutorial.html)
@@ -11,6 +24,15 @@
 `pip install --upgrade diffusers[torch]`
 
 ## Prepare the images
+
+# Using SimpleTokenizer from Keras to load model from this site.
+[clip](https://github.com/openai/CLIP)
+
+# Prepare the inputs
+image, class_id = cifar100[3637]
+image_input = preprocess(image).unsqueeze(0).to(device)
+text_inputs = torch.cat([clip.tokenize(f"a photo of a {c}") for c in cifar100.classes]).to(device)
+
 
 ### augmenter
 
@@ -47,3 +69,10 @@ PyTorch 2.0 includes a scaled dot-product attention function as part of torch.nn
 
 -- doesn't work with mps
 `torch.compile()`
+
+## PROMPTS
+
+[Negative Prompts](https://stable-diffusion-art.com/how-negative-prompt-work/)
+
+Boilder plate for negative prompts
+ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face

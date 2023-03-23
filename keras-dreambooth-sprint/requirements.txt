@@ -4,3 +4,5 @@ tensorflow_datasets>=4.8.1
 pillow==9.4.0
 imutils
 opencv-python
+tensorflow-macos===2.11.0
+tensorflow-metal===0.7.0

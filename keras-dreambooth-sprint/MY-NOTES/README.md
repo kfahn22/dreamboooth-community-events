@@ -5,7 +5,13 @@
 [Resources](https://developer.apple.com/machine-learning/resources/)
 [WWWDC22](https://developer.apple.com/videos/all-videos/)
 [metal-code](https://developer.apple.com/metal/sample-code/)
+[automatic1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+[optimizations](https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/master/modules/sd_hijack_optimizations.py)
 
+## where to run code
+[paperspace](https://dev.to/amananandrai/cloud-resources-to-run-your-machine-learning-and-deep-learning-models-3b41)
+
+[fastai](https://medium.com/@johnniet19/fastai-2022-on-macbook-m1-pro-max-gpu-faa51d379a8c)
 ## Git Large File Storage
 
 [lfs](https://git-lfs.com)
